@@ -12,6 +12,9 @@ namespace XamarinFormsPrismSvgSample.iOS
         {
             Forms.Init();
 
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
+            FFImageLoading.Svg.Forms.SvgCachedImage.Init();
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

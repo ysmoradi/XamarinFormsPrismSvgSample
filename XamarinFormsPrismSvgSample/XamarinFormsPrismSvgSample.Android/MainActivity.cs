@@ -18,6 +18,9 @@ namespace XamarinFormsPrismSvgSample.Droid
 
             Forms.Init(this, bundle);
 
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true);
+            FFImageLoading.Svg.Forms.SvgCachedImage.Init();
+
             LoadApplication(new App());
         }
     }

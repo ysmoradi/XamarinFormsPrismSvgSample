@@ -27,6 +27,9 @@ namespace XamarinFormsPrismSvgSample.UWP
 
                 Xamarin.Forms.Forms.Init(e);
 
+                FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
+                FFImageLoading.Svg.Forms.SvgCachedImage.Init();
+
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
 
