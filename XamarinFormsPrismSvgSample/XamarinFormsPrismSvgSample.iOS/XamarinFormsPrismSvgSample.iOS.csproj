@@ -170,4 +170,7 @@
       <Name>XamarinFormsPrismSvgSample</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <LinkDescription Include="LinkerConfig.xml" />
+  </ItemGroup>
 </Project>

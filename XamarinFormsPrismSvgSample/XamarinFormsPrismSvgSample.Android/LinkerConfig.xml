@@ -1,0 +1,14 @@
+﻿<linker>
+  <assembly fullname="Prism.Forms">
+    <type fullname="*" />
+  </assembly>
+  <assembly fullname="Prism">
+    <type fullname="*" />
+  </assembly>
+  <assembly fullname="Autofac">
+    <type fullname="*" />
+  </assembly>
+  <assembly fullname="XamarinFormsPrismSvgSample">
+    <type fullname="*" />
+  </assembly>
+</linker>
