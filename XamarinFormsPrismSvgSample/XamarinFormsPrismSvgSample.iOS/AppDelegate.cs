@@ -10,10 +10,10 @@ namespace XamarinFormsPrismSvgSample.iOS
     {
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            Forms.Init();
-
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             FFImageLoading.Svg.Forms.SvgCachedImage.Init();
+
+            Forms.Init();
 
             LoadApplication(new App());
 

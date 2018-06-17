@@ -25,10 +25,10 @@ namespace XamarinFormsPrismSvgSample.UWP
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
-                Xamarin.Forms.Forms.Init(e);
-
                 FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
                 FFImageLoading.Svg.Forms.SvgCachedImage.Init();
+
+                Xamarin.Forms.Forms.Init(e);
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {

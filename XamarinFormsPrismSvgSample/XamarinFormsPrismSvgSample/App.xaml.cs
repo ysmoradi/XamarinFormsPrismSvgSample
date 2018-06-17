@@ -1,6 +1,8 @@
-﻿using Prism;
+﻿using FFImageLoading;
+using Prism;
 using Prism.Autofac;
 using Prism.Ioc;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using XamarinFormsPrismSvgSample.ViewModels;
@@ -21,7 +23,14 @@ namespace XamarinFormsPrismSvgSample
         public App(IPlatformInitializer initializer)
                     : base(initializer)
         {
-
+            ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration()
+            {
+                VerboseLogging = false,
+                VerbosePerformanceLogging = false,
+                VerboseMemoryCacheLogging = false,
+                VerboseLoadingCancelledLogging = false,
+                Logger = new ImageServiceDebugLogger(),
+            });
         }
 
         protected override void OnInitialized()
@@ -35,6 +44,24 @@ namespace XamarinFormsPrismSvgSample
         {
             containerRegistry.RegisterForNavigation<NavigationPage>("Nav");
             containerRegistry.RegisterForNavigation<SampleView, SampleViewModel>("Sample");
+        }
+    }
+
+    public class ImageServiceDebugLogger : FFImageLoading.Helpers.IMiniLogger
+    {
+        public void Debug(string message)
+        {
+            System.Diagnostics.Debug.WriteLine(message);
+        }
+
+        public void Error(string errorMessage)
+        {
+            System.Diagnostics.Debug.WriteLine(errorMessage);
+        }
+
+        public void Error(string errorMessage, Exception ex)
+        {
+            throw ex;
         }
     }
 }
