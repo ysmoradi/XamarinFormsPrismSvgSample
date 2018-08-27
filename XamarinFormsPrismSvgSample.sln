@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsPrismSvgSample.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsPrismSvgSample.UWP", "XamarinFormsPrismSvgSample\XamarinFormsPrismSvgSample.UWP\XamarinFormsPrismSvgSample.UWP.csproj", "{6C45BA04-6231-44B9-9EA7-AE793274F5A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsPrismSvgSample", "XamarinFormsPrismSvgSample\XamarinFormsPrismSvgSample\XamarinFormsPrismSvgSample.csproj", "{2E784A00-FDB9-476A-8E23-D774D5055D73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XamarinFormsPrismSvgSample", "XamarinFormsPrismSvgSample\XamarinFormsPrismSvgSample\XamarinFormsPrismSvgSample.csproj", "{2E784A00-FDB9-476A-8E23-D774D5055D73}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
