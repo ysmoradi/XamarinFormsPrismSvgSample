@@ -1,4 +1,8 @@
-﻿using System;
+﻿using FFImageLoading.Forms;
+using FFImageLoading.Forms.Platform;
+using FFImageLoading.Svg.Forms;
+using System;
+using System.Reflection;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
@@ -25,10 +29,14 @@ namespace XamarinFormsPrismSvgSample.UWP
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
-                FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
-                FFImageLoading.Svg.Forms.SvgCachedImage.Init();
+                CachedImageRenderer.Init();
+                SvgCachedImage.Init();
 
-                Xamarin.Forms.Forms.Init(e);
+                Xamarin.Forms.Forms.Init(e, rendererAssemblies: new[]
+{
+                    typeof(CachedImage).GetTypeInfo().Assembly,
+                    typeof(CachedImageRenderer).GetTypeInfo().Assembly
+                });
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
