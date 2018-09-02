@@ -45,6 +45,7 @@
     <BundleAssemblies>true</BundleAssemblies>
     <EnableProguard>true</EnableProguard>
     <AotAssemblies>true</AotAssemblies>
+    <AndroidAotAdditionalArguments>no-write-symbols,nodebug</AndroidAotAdditionalArguments>
     <EnableLLVM>true</EnableLLVM>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidSupportedAbis />
